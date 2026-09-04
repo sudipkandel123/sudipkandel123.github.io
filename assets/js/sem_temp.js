@@ -104,13 +104,14 @@ let header = $(`
 
 $(document).ready(function () {
   // updating the color of the swiper bullets (initial update of color)
-  updateColorOfSwiperBullets(localStorage.getItem("lightMode"));
+  updateColorOfSwiperBullets(getStoredTheme(localStorage));
 });
 
 // Window Loads
 $(function () {
   let bodyElement = $(`body`);
   bodyElement.prepend(header);
+  applyStoredTheme(document, localStorage);
 
   //toggler hamburger functions
   const menuBtn = document.querySelector(".navbar-toggler");
@@ -133,69 +134,18 @@ $(function () {
   });
 });
 
-//consistent dark mode for page change
-if (localStorage.getItem("lightMode") == "dark") {
-  var app = document.getElementsByTagName("HTML")[0];
-  app.setAttribute("light-mode", "dark");
-
-  //to add dark theme to nav bar after its been loaded
-  window.addEventListener("load", function () {
-    var nav = document.getElementById("navbar");
-    nav.classList.add("dark-theme");
-    document.getElementById("dark_toggler").checked = true;
-  });
-
-  var sc = document.getElementsByClassName("socialicon");
-  for (var i = 0; i < sc.length; i++) {
-    sc[i].classList.add("dsc");
-  }
-} else {
-  localStorage.setItem("lightMode", "light");
-}
-
 function toggle_light_mode() {
-  console.log(localStorage.getItem("lightMode"));
-  var app = document.getElementsByTagName("HTML")[0];
-  var nav = document.getElementById("navbar");
-  if (localStorage.lightMode == "dark") {
-    localStorage.lightMode = "light";
-    app.setAttribute("light-mode", "light");
-    nav.classList.remove("dark-theme");
-    var sc = document.getElementsByClassName("socialicon");
-    for (var i = 0; i < sc.length; i++) {
-      sc[i].classList.remove("dsc");
-    }
-  } else {
-    nav.classList.add("dark-theme");
-    localStorage.lightMode = "dark";
-    app.setAttribute("light-mode", "dark");
-    var sc = document.getElementsByClassName("socialicon");
-    for (var i = 0; i < sc.length; i++) {
-      sc[i].classList.add("dsc");
-    }
-  }
-
-  // updating the swiper bullets
-  updateColorOfSwiperBullets(localStorage.getItem("lightMode"));
+  toggleStoredTheme(document, localStorage);
+  updateColorOfSwiperBullets(getStoredTheme(localStorage));
 }
 
-// function to update swiper bullets
 function updateColorOfSwiperBullets(lightMode) {
-  document.querySelectorAll(".swiper-pagination-bullet").forEach((bullet) => {
-    if (lightMode == "light") {
-      bullet.style.backgroundColor = "blue";
-    } else {
-      bullet.style.backgroundColor = "white";
-    }
-  });
+  updateSwiperBulletColors(document, lightMode);
 }
 
-window.addEventListener("storage", function () {
-  if (localStorage.lightMode == "dark") {
-    app.setAttribute("light-mode", "dark");
-  } else {
-    app.setAttribute("light-mode", "light");
-  }
+window.addEventListener("storage", function onThemeStorageChange() {
+  applyStoredTheme(document, localStorage);
+  updateColorOfSwiperBullets(getStoredTheme(localStorage));
 });
 
 // Function to remove scroll bar during preload

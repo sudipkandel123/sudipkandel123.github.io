@@ -9,7 +9,7 @@ document.body.appendChild(script);
 // Header
 
 let header = $(`
-<nav class="navbar navbar-expand-lg fixed-top dark-theme" id="navbar">
+<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
 <a class="navbar-brand" href="index.html">Sudip Kandel </a>
 <div class="hamburger_wrapper navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -24,13 +24,16 @@ let header = $(`
 <div class="collapse navbar-collapse " id="navbarSupportedContent">
   <ul class="navbar-nav ml-auto" id = "navbar-content">
    <li class="nav-item nav-item-hover"><a class="nav-link" href="index.html">Home</a></li>
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="index.html#about">About</a></li>
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="index.html#how-i-work">How I work</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="experience.html">Experience</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="projects.html">Projects</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="research.html">Research</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="education.html">Education</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="https://medium.com/@sudipkandel123" target="_blank">Blogs</a></li>
-   <li class="nav-item">
-   <input type="checkbox" id="dark_toggler" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggle_light_mode()" checked>
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="reference.html">Recommendations</a></li>
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="blog.html">Blogs</a></li>
+   <li class="nav-item nav-item-theme">
+   <input type="checkbox" id="dark_toggler" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
    </li>
    <div class="bike">
    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-80 0 650 400" preserveAspectRatio="xMinYMin meet">
@@ -118,7 +121,7 @@ let footer = $(`
       <!--SVG code for quote-left icon-->
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.5em" height="1.5em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M7 21a4 4 0 0 1-4-4c0-1.473 1.333-6.14 4-14h2L7 13a4 4 0 1 1 0 8zm10 0a4 4 0 0 1-4-4c0-1.473 1.333-6.14 4-14h2l-2 10a4 4 0 1 1 0 8z" fill="#fff" fill-rule="evenodd"/></svg>
       </div>
-      <p class="tag" >Develop a passion for learning. If you do, you will never cease to grow.</p>
+      <p class="tag" >The biggest challenge in AI is no longer building intelligent systems - it is building systems that people can trust.</p>
     </div>
 
     
@@ -148,6 +151,13 @@ let footer = $(`
                     <div id="lnch_btn"><i class="fas fa-space-shuttle"></i></div>
                   </div>
                 </form>
+                <p class="schedule-footer-copy">Prefer a conversation?</p>
+                <div id="schedule-cta-footer">
+                  <a class="schedule-cta schedule-cta-footer" href="https://calendly.com/sudipkandel/new-meeting" target="_blank" rel="noopener noreferrer" data-calendly-cta="true" data-testid="schedule-cta-footer">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    Schedule a time together
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -158,7 +168,7 @@ let footer = $(`
     
 
     <div class="rounded-social-buttons tag">
-    <a class="social-button twitter" href="#" target="_blank">
+    <a class="social-button twitter" href="https://x.com/sudip_kandel" target="_blank">
     <!-- SVG code for twitter icon -->
     <svg class="twitter-icon-footer" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" enable-background="new 0 0 500 500"
@@ -216,7 +226,7 @@ let footer = $(`
     </svg>
     </a>
 
-    <a class="social-button linkedin" href="" target="_blank" >
+    <a class="social-button linkedin" href="https://www.linkedin.com/in/sudipkandel123/" target="_blank" >
     <!-- svg code for linkedin icon -->
       <svg class="linkedin-icon-footer" xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 24 24" fill="#0e76a8"
         stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
@@ -228,7 +238,7 @@ let footer = $(`
 
 
 
-    <a class="social-button instagram" href="" target="_blank" >
+    <a class="social-button instagram" href="https://www.instagram.com/name_sudip" target="_blank" >
     <!-- svg code for instagram icon -->
       <svg class="instagram-icon-footer" x="0px" y="0px" viewBox="0 0 202.5 202.5"
         style="enable-background:new 0 0 202.5 202.5;">
@@ -239,7 +249,7 @@ let footer = $(`
       </svg>
     </a>
 
-    <a class="social-button github" href="#" target="_blank">
+    <a class="social-button github" href="https://github.com/sudipkandel123" target="_blank">
     <!-- SVG code for Github icon -->
     <svg class="github-icon-footer" width="45px" height="45px" viewBox="0 0 300 300">
         <!-- body -->
@@ -269,7 +279,7 @@ let upArrow = $(`
 
 $(document).ready(function () {
   // updating the color of the swiper bullets (initial update of color)
-  updateColorOfSwiperBullets(localStorage.getItem("lightMode"));
+  updateColorOfSwiperBullets(getStoredTheme(localStorage));
 
   //function for the "Scroll To Top" button to detect the footer
   $(window).scroll(function () {
@@ -305,7 +315,11 @@ const scrollToTop = () => {
 $(function () {
   let bodyElement = $(`body`);
   bodyElement.prepend(header);
+  applyStoredTheme(document, localStorage);
   bodyElement.append(footer);
+  if (typeof initCalendly === "function") {
+    initCalendly();
+  }
   bodyElement.append(upArrow);
   $("#btnScrollToTop").css("visibility", "hidden");
 
@@ -363,69 +377,18 @@ $(document).ready(function () {
   );
 });
 
-//consistent light mode for page change
-if (localStorage.getItem("lightMode") == "light") {
-  var app = document.getElementsByTagName("HTML")[0];
-  app.setAttribute("light-mode", "light");
-
-  //to add dark theme to nav bar after its been loaded
-  window.addEventListener("load", function () {
-    var nav = document.getElementById("navbar");
-    nav.classList.remove("dark-theme");
-    document.getElementById("dark_toggler").checked = false;
-  });
-
-  var sc = document.getElementsByClassName("socialicon");
-  for (var i = 0; i < sc.length; i++) {
-    sc[i].classList.remove("dsc");
-  }
-} else {
-  localStorage.setItem("lightMode", "dark");
-}
-
 function toggle_light_mode() {
-  console.log(localStorage.getItem("lightMode"));
-  var app = document.getElementsByTagName("HTML")[0];
-  var nav = document.getElementById("navbar");
-  if (localStorage.lightMode == "dark") {
-    localStorage.lightMode = "light";
-    app.setAttribute("light-mode", "light");
-    nav.classList.remove("dark-theme");
-    var sc = document.getElementsByClassName("socialicon");
-    for (var i = 0; i < sc.length; i++) {
-      sc[i].classList.remove("dsc");
-    }
-  } else {
-    nav.classList.add("dark-theme");
-    localStorage.lightMode = "dark";
-    app.setAttribute("light-mode", "dark");
-    var sc = document.getElementsByClassName("socialicon");
-    for (var i = 0; i < sc.length; i++) {
-      sc[i].classList.add("dsc");
-    }
-  }
-
-  // updating the swiper bullets
-  updateColorOfSwiperBullets(localStorage.getItem("lightMode"));
+  toggleStoredTheme(document, localStorage);
+  updateColorOfSwiperBullets(getStoredTheme(localStorage));
 }
 
-// function to update swiper bullets
 function updateColorOfSwiperBullets(lightMode) {
-  document.querySelectorAll(".swiper-pagination-bullet").forEach((bullet) => {
-    if (lightMode == "light") {
-      bullet.style.backgroundColor = "blue";
-    } else {
-      bullet.style.backgroundColor = "white";
-    }
-  });
+  updateSwiperBulletColors(document, lightMode);
 }
 
-window.addEventListener("storage", function () {
-  if (localStorage.lightMode == "dark") {
-    app.setAttribute("light-mode", "dark");
-  } else {
-    app.setAttribute("light-mode", "light");
-  }
+window.addEventListener("storage", function onThemeStorageChange() {
+  applyStoredTheme(document, localStorage);
+  updateColorOfSwiperBullets(getStoredTheme(localStorage));
 });
 
 // Function to remove scroll bar during preload

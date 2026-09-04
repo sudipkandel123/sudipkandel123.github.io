@@ -1,29 +1,41 @@
 AOS.init();
 
-//  Work experience cards
-
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
-    title: "AI/ML Engineer Senior Analyst",
+    title: "AI Solution Engineer - Manager",
+    cardImage: "assets/images/experience-page/pwc.png",
+    place: "PwC UK · Full-time · Hybrid",
+    time: "(Sep 2026 - Present · London Area, United Kingdom)",
+    desp: "<li>Leading AI solution engineering from discovery to production, turning complex client challenges into secure, scalable, and commercially viable capabilities.</li><li>Partner with clients, business leaders, and technical teams to uncover needs, prioritise high-value use cases, develop business cases, and shape delivery roadmaps.</li><li>Assess opportunities against expected value, technical feasibility, total cost, risk, data readiness, and organisational capability.</li>",
+  },
+  {
+    title: "Ambassador - London",
+    cardImage: "assets/images/experience-page/langchain.png",
+    place: "LangChain Community",
+    time: "(Nov 2025 - Present · London Area, United Kingdom)",
+    desp: "<li>Represent the LangChain community by supporting developers, promoting open-source collaboration, and encouraging innovation in AI agent development.</li><li>Host hackathons and technical community events focused on real-world AI applications and agentic systems.</li><li>Share hands-on knowledge on LangChain, LangSmith, AI agents, MCP, memory systems, and production-ready orchestration.</li><li>Promote best practices for scalable and ethical AI, including observability, evaluation, and responsible deployment.</li>",
+  },
+  {
+    title: "Senior AI/ML Engineer",
+    cardImage: "assets/images/experience-page/awtg.png",
+    place: "AWTG Ltd · Full-time · On-site",
+    time: "(Jul 2025 - Aug 2026 · London Area, United Kingdom)",
+    desp: "<li>Built agentic capabilities from business requirements and developed in-house platforms including KAI - <a href='https://platform.awtg.ai' target='_blank' rel='noopener'>platform.awtg.ai</a>.</li><li>Led AI engineering for a no-code agentic assistant platform covering knowledge-grounded conversations, RBAC, integrations, and conversation insights.</li><li>Worked across Agents, GraphRAG, CI/CD, and FastAPI to deliver production-grade AI systems.</li>",
+  },
+  {
+    title: "Senior AI/ML Computational Science Engineer",
     cardImage: "assets/images/experience-page/accenture.png",
-    place: "Accenture",
-    time: "(Mar, 2020 - Sept, 2024)",
-    desp: "<li>Specialized in developing and maintaing LLMs, Finetuning models, Natural language processing and deployment. Worked in developing end to end Machine learning solutions specially in Azure.</li>",
+    place: "Accenture AI · Full-time · Hybrid",
+    time: "(May 2020 - Sep 2024 · 4 yrs 7 mos)",
+    desp: "<li><strong>Senior AI/ML Computational Science Engineer</strong> (May 2022 - Sep 2024, Pune) - built AI-driven BI products including Watchtower (anomaly and root-cause SaaS) and AI over BI.</li><li>Developed Watchtower for real-time visibility into business operations, anomaly detection, and faster data-driven decisions.</li><li>Contributed to AI over BI: automated insights, predictive analysis, and natural-language data exploration beyond static dashboards.</li><li><strong>AI Engineer II</strong> (Mar 2021 - May 2022, Bengaluru) - Data Engineering and ML operations, Technology Labs.</li><li><strong>Associate AI Engineer</strong> (May 2020 - Aug 2021) and <strong>Data Analyst</strong> (Mar 2020 - May 2020).</li>",
   },
   {
     title: "Reporting Analyst",
     cardImage: "assets/images/experience-page/exl.jpg",
-    place: "EXL Services",
-    time: "(Aug 2019 - Mar, 2020)",
-    desp: "<li>Working with Machine learning solutions for CI/CD using FastAPI. developed robust strategy and consulting skills to deliver impactful solutions to clients. </li>",
-  },
-  {
-    title: "Intern",
-    cardImage: "assets/images/experience-page/fixolla.jpg",
-    place: "Fixolla",
-    time: "(Mar, 2020 - Jul, 2020)",
-    desp: "<li>Worked as an Intern in helping boost Fixolla's Ad Revenue with GoogleAds360 </li>",
+    place: "Datasource Consulting, an EXL company",
+    time: "(Aug 2019 - Mar 2020 · Greater Bengaluru Area)",
+    desp: "<li>Delivered reporting and data-engineering support in a full-stack analytics environment, including end-to-end advanced analytics implementation.</li><li>Worked across data warehousing and data engineering to produce client-ready insights.</li>",
   },
 ];
 
@@ -57,33 +69,31 @@ const showCards2 = () => {
 };
 document.addEventListener("DOMContentLoaded", showCards2);
 
-// Volunteership Cards
-
 const volunteership = document.querySelector(".volunteership");
 const volunteershipcards = [
   {
-    title: "GirlScript Summer Of Code 2020",
-    cardImage: "assets/images/experience-page/1.jpg",
+    title: "LangChain Ambassador - London",
+    cardImage: "assets/images/experience-page/langchain.png",
     description:
-      "Responsible for handling the projects GirlScript App and GirlScript Website Boilerplate.",
+      "Host hackathons and workshops, build community connections, and share AI/ML initiatives so practitioners can learn and collaborate. Oct 2025 – Present.",
   },
   {
-    title: "StudentCode-in 2020",
-    cardImage: "assets/images/experience-page/2.jpg",
+    title: "STEM Ambassador",
+    cardImage: "assets/images/experience-page/stem.png",
     description:
-      "Responsible for handling open source contributions for the project Awesome Developer Portfolio.",
+      "STEM Learning UK. Visit schools, lead workshops, and share my career journey to make STEM more accessible and inclusive. Jul 2026 – Present.",
   },
   {
-    title: "PClub Summer Of Code 2020",
-    cardImage: "assets/images/experience-page/3.jpg",
+    title: "Student Volunteer - Parichaya",
+    cardImage: "assets/images/experience-page/parichaya.png",
     description:
-      "Mentoring for the projects Deep Pixel, AutoVaidya, Just Resume and Doc2pen.",
+      "Community outreach and team coordination supporting marginalised communities, especially women and girls. Jan 2023 – Jun 2024.",
   },
   {
-    title: "Hakin-Codes",
-    cardImage: "assets/images/experience-page/4.jpg",
+    title: "Meditation Instructor",
+    cardImage: "assets/images/experience-page/osho.png",
     description:
-      "Mentoring for the open source projects Deeppixel, Awesome Developer Portfolios and Doc2Pen.",
+      "Facilitated mindfulness and meditation workshops at Osho Tathagat Meditation Center and Kashish Yoga (2021–2022).",
   },
 ];
 
@@ -106,114 +116,28 @@ const showCards = () => {
 };
 document.addEventListener("DOMContentLoaded", showCards);
 
-// Hackathon Section
-
 const hackathonsection = document.querySelector(".hackathon-section");
 const mentor = [
   {
-    title: "The Uplift Project",
-    subtitle: "Mentor",
-    image: "assets/images/experience-page/uplift.png",
-    desp: "I would be responsible for guiding 100s of participants across the globe in their first steps towards Applied Data Science and building end-to-end machine learning projects.",
-    href: "https://uplift.girlscript.tech/",
+    title: "ElevenLabs × UK Government i.AI",
+    subtitle: "Builder - FixFirst",
+    image: "assets/images/experience-page/elevenlabs.png",
+    desp: "Built FixFirst, a voice-first, graph-aware, multi-agent platform for social-housing repair requests. Stack: ElevenLabs, OpenAI, LangGraph, LangSmith, Neo4j, Qdrant, Redis, PostgreSQL, Next.js, and FastAPI.",
+    href: "https://www.youtube.com/watch?v=8-3Y8ubYzCI",
   },
   {
-    title: "ULHacks",
-    subtitle: "Judge",
-    image: "assets/images/experience-page/ulhacks.png",
-    desp: "ULHacks is a 36 hour long hackathon organized with an aim to enable students to create a project which empowers learning.",
-    href: "https://ulhacks.com/",
+    title: "Cognee Hackathon - DeadZone",
+    subtitle: "1st Prize · Offline Multi-Agent System",
+    image: "assets/images/experience-page/cognee.png",
+    desp: "Won 1st prize for DeadZone, a fully offline multi-agent operational continuity system for underground facility teams. Local Gemma 4 via Ollama, Fastify, React/Expo, Redis Streams, and Cognee-inspired memory.",
+    href: "https://www.linkedin.com/in/sudipkandel123/",
   },
   {
-    title: "WaffleHacks",
-    subtitle: "Judge",
-    image: "assets/images/experience-page/wafflehacks.png",
-    desp: "WaffleHacks 2021 is an upcoming 48-hour student-organized hackathon with an aim to bring technical solutions to local communities and small businesses.",
-    href: "https://wafflehacks.org/",
-  },
-  {
-    title: "Elevate Tech",
-    subtitle: "Judge",
-    image: "assets/images/experience-page/elevate.png",
-    desp: "Elevate Hacks is an upcoming all-female virtual hackathon coming from AUGUST 14th to 15th.",
-    href: "https://elevatetech.codes/",
-  },
-  {
-    title: "PitchTeen",
-    subtitle: "Judge",
-    image: "assets/images/experience-page/pitchteen.png",
-    desp: "PitchTeen 2.0 was a tech startup competition for female and non-binary communities in high school and college from all over the world with an aim to create a safe and encouraging place for women to help them explore tech and business fields.",
-    href: "https://www.linkedin.com/company/pitchteen/about/",
-  },
-  {
-    title: "Hack-A-Solution",
-    subtitle: "Judge",
-    image: "assets/images/experience-page/hackasolution.png",
-    desp: "Hack-a-Solution 2021 is a 24 hour long hackathon organized by Frisco students to raise awareness of world issues through technology.",
-    href: "https://hackasolution.devpost.com/",
-  },
-  {
-    title: "UniGlobe Hacks",
-    subtitle: "Judge",
-    image: "assets/images/experience-page/uniglobe.png",
-    desp: "UniGlobe Hacks 2.0 is an upcoming 4-day long hackathon run by high school students held during 28-31 July 2021.",
-    href: "https://uniglobe-hacks.devpost.com/",
-  },
-  {
-    title: "AtlasHacks",
-    subtitle: "Mentor",
-    image: "assets/images/experience-page/atlas.png",
-    desp: "AtlasHacks II is a 3-day virtual hackathon that aims to foster creativity within hackers all around the world.",
-    href: "https://atlashacks2.devpost.com/",
-  },
-  {
-    title: "NeoHacks",
-    subtitle: "Judge",
-    image: "assets/images/experience-page/neo.png",
-    desp: "NeoHacks is an upcoming 48-hour hackathon taking place July 23-25, 2021 where hundreds of students from around the world will come together virtually to learn new skills, meet new friends, and build awesome projects. We provide beginner-friendly workshops, mentorship, fun games, and more.",
-    href: "https://neohacks.org/",
-  },
-  {
-    title: "Mission Inspired",
-    subtitle: "Judge",
-    image: "assets/images/experience-page/mission.png",
-    desp: "InspireEd Hacks is a nationwide initiative organized by the student-for-student nonprofit, Mission InspirEd, challenging students ages 10-18 to synthesize their creativity and coding experience into a product beneficial to the educational community.",
-    href: "https://www.missioninspired.org/hackathon",
-  },
-  {
-    title: "Hack3",
-    subtitle: "Judge",
-    image: "assets/images/experience-page/hack3.png",
-    desp: "Hack3 2021 is an upcoming global online hackathon that aims to enable high school students to learn computer science, with a broader message of (everyone can code) targeting underrepresented demographics to improve diversity and inclusion of individuals in the computer technology space.",
-    href: "https://hack3.co/",
-  },
-  {
-    title: "JITHack",
-    subtitle: "Mentor",
-    image: "assets/images/experience-page/jithack.png",
-    desp: "JITHack is an upcoming virtual design and development hackathon organized by the students of Jyothy Institute of Technology, Bengaluru on June 26, 2021, where participants have 24 hours to build something incredible.",
-    href: "https://jithack.netlify.app/",
-  },
-  {
-    title: "Recess Hacks",
-    subtitle: "Mentor",
-    image: "assets/images/experience-page/recess.png",
-    desp: "Recess Hacks is an upcoming hackathon for high school students in the Greater Toronto Area that strives to encourage innovation among high school students and get involved in technology.",
-    href: "https://recesshacks.com/",
-  },
-  {
-    title: "Citro Tech",
-    subtitle: "Mentor",
-    image: "assets/images/experience-page/citro.png",
-    desp: "Citro Hacks 2021 is an upcoming all-inclusive online hackathon organized by Citro Tech, a student led organization dedicated to empowering minorities in the tech field</li>",
-    href: "https://citro.tech/",
-  },
-  {
-    title: "NHacks",
-    subtitle: "Judge",
-    image: "assets/images/experience-page/nhacks.png",
-    desp: "NHacks VI was a hackathon that aimed to encourage students everywhere to develop skills in computer science by creating tangible products that they're proud of. It initially started as Michigan's largest high school hackathon.",
-    href: "https://nhacks-vi.devpost.com/",
+    title: "Veed.io Hackathon - VeedIT",
+    subtitle: "Participant",
+    image: "assets/images/project-page/kai.jpg",
+    desp: "Built a video generator with auto-subtitles using ElevenLabs, Veed.io, Fal, and Sieve, plus a GraphRAG knowledge graph to relate images and produce live video with music.",
+    href: "https://www.linkedin.com/in/sudipkandel123/",
   },
 ];
 
@@ -224,13 +148,13 @@ const showCards3 = () => {
       (output += `  
       <div class="blog-slider__item swiper-slide">
         <div class="blog-slider__img">
-            <img src="${image}" alt="">
+            <img src="${image}" alt="${title}">
         </div>
         <div class="blog-slider__content">
           <div class="blog-slider__title">${title}</div>
           <span class="blog-slider__code">${subtitle}</span>
           <div class="blog-slider__text">${desp}</div>
-          <a href="${href}" class="blog-slider__button">Read More</a>   
+          <a href="${href}" target="_blank" rel="noopener" class="blog-slider__button">Read More</a>   
         </div>
       </div>
       `)

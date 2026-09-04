@@ -1,88 +1,74 @@
 AOS.init();
 
-// MOOCs Cards
-
 const moocs = document.querySelector(".moocs");
 const moocscards = [
   {
-    title: "Data Science",
-    cardImage: "assets/images/education-page/coursera2.svg",
-    moocLink: "https://www.coursera.org/browse/data-science",
+    title: "Introduction to Responsible AI",
+    cardImage: "assets/images/education-page/google.png",
+    moocLink: "https://www.linkedin.com/in/sudipkandel123/",
   },
   {
-    title: "Cryptography",
-    cardImage: "assets/images/education-page/udemy.svg",
-    moocLink: "https://www.udemy.com/course/cryptography-for-beginners/",
+    title: "Gemini Enterprise Application",
+    cardImage: "assets/images/education-page/google.png",
+    moocLink: "https://www.linkedin.com/in/sudipkandel123/",
   },
   {
-    title: "Machine Learning",
-    cardImage: "assets/images/education-page/coursera2.svg",
-    moocLink: "https://www.coursera.org/learn/machine-learning",
+    title: "Hugging Face AI Agents",
+    cardImage: "assets/images/education-page/huggingface.png",
+    moocLink: "https://huggingface.co/datasets/agents-course/certificates/resolve/main/certificates/namesudip/2025-02-13.png",
   },
   {
-    title: "Introduction to HTML 5",
-    cardImage: "assets/images/education-page/udacity.svg",
-    moocLink: "https://www.udacity.com/course/intro-to-html-and-css--ud001",
+    title: "Multi AI Agent Systems with crewAI",
+    cardImage: "assets/images/education-page/deeplearningai.png",
+    moocLink: "https://learn.deeplearning.ai/accomplishments/7019231f-4470-4ba8-ae06-199e15b5569c",
   },
   {
-    title: "Introduction to CSS 3",
-    cardImage: "assets/images/education-page/udacity.svg",
-    moocLink: "https://www.udacity.com/course/intro-to-html-and-css--ud001",
+    title: "AI Agents in LangGraph",
+    cardImage: "assets/images/education-page/deeplearningai.png",
+    moocLink: "https://learn.deeplearning.ai/accomplishments/10713b3e-5f20-4a6e-9877-0aad19a4bb4e",
   },
   {
-    title: "Javascript",
-    cardImage: "assets/images/education-page/udacity.svg",
-    moocLink: "https://www.udacity.com/course/intro-to-javascript--ud803",
+    title: "Databricks Generative AI",
+    cardImage: "assets/images/education-page/databricks.png",
+    moocLink: "https://credentials.databricks.com/661f7eb1-4272-4fe9-9ed8-871f157666fa",
   },
   {
-    title: "Bootstrap 4",
-    cardImage: "assets/images/education-page/udemy.svg",
-    moocLink: "https://www.udemy.com/course/bootstrap-4-tutorials/",
+    title: "Azure Databricks Platform Architect",
+    cardImage: "assets/images/education-page/databricks.png",
+    moocLink: "https://credentials.databricks.com/48053743-c9cd-4d39-ab23-dcc6e4119bdb",
   },
   {
-    title: "Intro to React",
-    cardImage: "assets/images/education-page/edx.svg",
-    moocLink: "https://www.edx.org/learn/reactjs",
+    title: "Databricks Fundamentals",
+    cardImage: "assets/images/education-page/databricks.png",
+    moocLink: "https://credentials.databricks.com/c3e39f3a-b7ec-4bf0-af9f-9e9bb01b4d03",
   },
   {
-    title: "Intro to React Native",
-    cardImage: "assets/images/education-page/coursera2.svg",
-    moocLink:
-      "https://www.coursera.org/lecture/react-native/introduction-to-react-native-Eax0D",
+    title: "Executive PG Programme - AI/ML (IIITB)",
+    cardImage: "assets/images/education-page/iiitb.png",
+    moocLink: "https://www.credential.net/ab27d6df-a01a-4a12-8688-0a6177081786",
   },
   {
-    title: "NodeJS, Express and MongoDB",
-    cardImage: "assets/images/education-page/coursera2.svg",
-    moocLink: "https://www.coursera.org/learn/server-side-nodejs",
-  },
-  {
-    title: "XML-AJAX",
-    cardImage: "assets/images/education-page/udemy.svg",
-    moocLink: "https://www.udemy.com/course/xml-from-beginner-to-expert/",
-  },
-  {
-    title: "Data Structures & Algorithms",
-    cardImage: "assets/images/education-page/udacity.svg",
-    moocLink:
-      "https://www.udacity.com/course/data-structures-and-algorithms-nanodegree--nd256",
+    title: "DeepLearning.AI Course",
+    cardImage: "assets/images/education-page/deeplearningai.png",
+    moocLink: "https://learn.deeplearning.ai/accomplishments/1178941c-a3aa-4cb0-99b4-d64637162ec6",
   },
 ];
 
 const experience = [
   {
-    img: "assets/images/education-page/c1.png",
+    img: "assets/images/education-page/hf-agents.png",
   },
   {
-    img: "assets/images/education-page/c2.jpg",
+    img: "assets/images/education-page/google.png",
   },
   {
-    img: "assets/images/education-page/c3.png",
+    img: "assets/images/education-page/databricks.png",
   },
   {
-    img: "assets/images/education-page/c4.png",
+    img: "assets/images/education-page/ljmu.png",
   },
   {
-    img: "assets/images/education-page/c5.jpg",
+    img: "assets/images/education-page/greenwich.png",
   },
 ];
 
@@ -103,7 +89,9 @@ function showExperience() {
       currentItem = 0;
     }
     const item = experience[currentItem];
-    img.src = item.img;
+    if (img) {
+      img.src = item.img;
+    }
     currentItem++;
   }, 3000);
 }
@@ -129,32 +117,35 @@ const showCards = () => {
         </div>        
       `)
   );
-  moocs.innerHTML = output;
+  if (moocs) {
+    moocs.innerHTML = output;
+  }
 };
 document.addEventListener("DOMContentLoaded", showCards);
-
-/* Badges*/
 
 const bagdes = document.querySelector(".badges");
 const badgesection = [
   {
-    title: "Google Developer Essentials",
-    image: "assets/images/education-page/badge1.png",
-    description: "Earned May 20, 2020",
+    title: "Introduction to Responsible AI",
+    image: "assets/images/education-page/google.png",
+    description: "Google · Issued Jul 2026",
   },
   {
-    title: "VM Migration",
-    image: "assets/images/education-page/badge2.png",
-    description: "Earned June 20, 2020",
+    title: "Gemini Enterprise Application",
+    image: "assets/images/education-page/google.png",
+    description: "Google · Issued Jun 2026",
   },
   {
-    title: "G Suite Essentials",
-    image: "assets/images/education-page/badge3.png",
-    description: "Earned July 20, 2020",
+    title: "Hugging Face AI Agents",
+    image: "assets/images/education-page/huggingface.png",
+    description: "Issued Feb 2025",
   },
 ];
 
 const showCards1 = () => {
+  if (!bagdes) {
+    return;
+  }
   let output = "";
   badgesection.forEach(
     ({ title, image, description }) =>
@@ -168,8 +159,6 @@ const showCards1 = () => {
   bagdes.innerHTML = output;
 };
 document.addEventListener("DOMContentLoaded", showCards1);
-
-/* Timeline Section*/
 
 $(function () {
   window.sr = ScrollReveal();
